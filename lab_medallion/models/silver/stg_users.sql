@@ -6,6 +6,8 @@ typed as (
     select
         cast(uuid as uuid) as user_id,
         trim(username) as username,
+        -- Exercise 1: trimmed and lowercased username
+        lower(trim(username)) as username_normalized,
         trim(name) as name,
         upper(trim(sex)) as sex,
         lower(trim(mail)) as email,
@@ -19,6 +21,7 @@ typed as (
 select
     user_id,
     username,
+    username_normalized,
     name,
     sex,
     email,
