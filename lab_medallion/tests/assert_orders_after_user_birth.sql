@@ -1,3 +1,5 @@
+-- A user cannot order before being born: the test fails if this query returns rows
+select
     o.order_id,
     o.ordered_at,
     u.user_id,
